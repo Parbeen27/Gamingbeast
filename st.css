@@ -155,6 +155,7 @@ nav .content .links{
 .content .links ul li:hover ul{
   top: 0;
 }
+
 /* Responsive code start */
 @media screen and (max-width: 1250px){
   .wrapper nav{
@@ -169,6 +170,7 @@ nav .content .links{
   }
   .wrapper .search-box{
     max-width: calc(100% - 100px);
+    z-index: 1000;
   }
   .wrapper .search-box input{
     padding: 0 100px 0 15px;
@@ -177,6 +179,7 @@ nav .content .links{
 @media screen and (max-width: 900px){
   .wrapper .menu-icon{
     display: block;
+    z-index: 1000;
   }
   .wrapper #show-menu:checked ~ .menu-icon i::before{
     content: "\f00d";
@@ -194,6 +197,7 @@ nav .content .links{
     overflow-y: auto;
     padding-bottom: 100px;
     transition: all 0.3s ease;
+    z-index: 999; /* Ensure menu stays above slider */
   }
   nav #show-menu:checked ~ .content .links{
     left: 0%;
@@ -234,26 +238,62 @@ nav .content .links{
     font-size: 18px;
     line-height: 30px;
     border-radius: 5px!important;
-  }
+  }}
+  /* Image Slider Styles */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin:  auto;
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensure slider stays below menu */
 }
-@media screen and (max-width: 400px){
-  .wrapper nav{
-    padding: 0 10px;
-  }
-  .content .logo a{
-    font-size: 27px;
-  }
-  .wrapper .search-box{
-    max-width: calc(100% - 70px);
-  }
-  .wrapper .search-box .go-icon{
-    width: 30px;
-    right: 0;
-  }
-  .wrapper .search-box input{
-    padding-right: 30px;
-  }
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
+
+.slider img {
+  width: 100vw;
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2; /* Ensure buttons are above slider but below menu */
+  transition: background 0.2s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 600px) {
+  .slider img { height: 290px; }
+  .slider-btn { font-size: 1.2rem; padding: 6px 10px; }
+}
+
+
+
 
 
 

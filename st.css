@@ -291,6 +291,28 @@ nav .content .links{
   .slider img { height: 290px; }
   .slider-btn { font-size: 1.2rem; padding: 6px 10px; }
 }
+.image-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  gap: 10px; /* Adds space between images */
+  padding: 10px;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.image-container img {
+      max-width: 100px; /* Ensures images are responsive */
+      height: auto;
+      border-radius: 8px; /* Optional: Rounded corners */
+      flex-shrink: 0; /* Prevents images from shrinking */
+    }
+.image-container::-webkit-scrollbar {
+      display: none;
+    }
+.image-container {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
 
 
 

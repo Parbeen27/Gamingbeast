@@ -96,60 +96,104 @@
   <button class="slider-btn next" id="nextBtn">&#10095;</button>
 </div>
 <!-- Image Slider End -->
-<p><b>Latest games</b></p>
-  <div class="image-container">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 1">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 2">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 3">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 4">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 5">
-  </div>
-  <p><b>Popular Games</b></p>
-  <div class="image-container">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 1">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 2">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 3">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 4">
-    <img src="images/far_cry_3_-_cover.jpg" alt="Image 5">
-  </div>
-  <!-- Footer -->
-  <footer class="bg-dark text-white pt-4">
-    <div class="container">
-      <div class="row">
-        <!-- About Section -->
-        <div class="col-md-4">
-          <h5>About Us</h5>
-          <p>We are dedicated to providing the best services and solutions for your needs. Contact us for more information!</p>
-        </div>
-        <!-- Quick Links -->
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
-            <li><a href="#" class="text-white text-decoration-none">About</a></li>
-          </ul>
-        </div>
-        <!-- Social Media -->
-        <div class="col-md-4">
-          <h5>Follow Us</h5>
-          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i> Facebook</a>
-          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i> Twitter</a>
-          <a href="#" class="text-white"><i class="bi bi-instagram"></i> Instagram</a>
-        </div>
+<div class="container mt-4">
+  <div class="row">
+    <!-- Main Content -->
+    <div class="col-lg-9 col-md-8">
+      <p>
+        <b>
+          <span style="color: #ff5722; font-size: 1.5em; vertical-align: middle;">
+            <i class="fas fa-fire"></i>
+          </span>
+          <span class="interactive-heading" style="cursor:pointer;" onclick="alert('Check out the latest games!')">
+            Latest Games
+          </span>
+        </b>
+      </p>
+      <div class="image-container mb-4">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 1" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 2" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 3" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 4" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 5" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
       </div>
-      <hr class="bg-white">
-      <!-- Copyright -->
-      <div class="text-center py-3">
-        <p class="mb-0">&copy; 2025 Your Company. All Rights Reserved.</p>
+      <p>
+        <b>
+          <span style="color: #ff5722; font-size: 1.5em; vertical-align: middle;">
+            <i class="fas fa-fire"></i>
+          </span>
+          <span class="interactive-heading" style="cursor:pointer;" onclick="alert('Popular games everyone loves!')">
+            Popular Games
+          </span>
+        </b>
+      </p>
+      <div class="image-container mb-4">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 1" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 2" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 3" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 4" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
+        <img src="images/far_cry_3_-_cover.jpg" alt="Image 5" class="img-thumbnail interactive-img" onclick="alert('Far Cry 3 - Clicked!')">
       </div>
     </div>
-  </footer>
+    <!-- Side Column -->
+    <aside class="col-lg-3 col-md-4 mb-4">
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-gift text-warning"></i> Special Offers</h5>
+          <p class="card-text">Check out our latest deals and giveaways!</p>
+          <a href="#" class="btn btn-sm btn-danger">View Offers</a>
+        </div>
+      </div>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-bullhorn text-info"></i> Announcements</h5>
+          <ul class="list-unstyled mb-0">
+            <li>🎉 New games added weekly!</li>
+            <li>🕹️ Join our Discord community!</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 mt-4">
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>We are dedicated to providing the best services and solutions for your needs. Contact us for more information!</p>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About</a></li>
+        </ul>
+      </div>
+      <!-- Social Media -->
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+    <hr class="bg-white">
+    <!-- Copyright -->
+    <div class="text-center py-3">
+      <p class="mb-0">&copy; 2025 Your Company. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
- <script src="js/sc.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/sc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

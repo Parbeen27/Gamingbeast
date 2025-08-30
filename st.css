@@ -16,34 +16,39 @@ a:hover {
   color: black;
 }
 
-
 .wrapper{
   background: #171c24;
   position: relative;
   width: 100%;
   overflow-wrap: normal;
+  min-height: 70px; /* Ensure wrapper has minimum height */
 }
 .wrapper nav{
   position: relative;
   display: flex;
-  max-width: calc(100% - 200px);
+  max-width: 100%; /* Fix: allow nav to use full width */
   margin: 0 auto;
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 nav .content{
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap */
 }
 nav .content .links{
   margin-left: 80px;
   display: flex;
+  flex-wrap: wrap; /* Allow links to wrap */
 }
 .content .logo a{
   color: #fff;
   font-size: 30px;
   font-weight: 600;
+  line-height: 70px; /* Align logo vertically */
+  display: block;
 }
 .content .links li{
   list-style: none;
@@ -312,9 +317,32 @@ nav .content .links{
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
-
-
-
+  .interactive-heading:hover {
+    color: #dc3719;
+    text-shadow: 0 0 8px #ff9800;
+    transition: 0.2s;
+  }
+  .interactive-img {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    margin: 0 5px 10px 0;
+    max-width: 120px;
+  }
+  .interactive-img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(220,55,25,0.2);
+    z-index: 2;
+  }
+  @media (max-width: 991.98px) {
+    aside {
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .image-container img {
+      max-width: 90px;
+    }
+  }
 
 
 

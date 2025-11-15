@@ -221,9 +221,33 @@ nav .content .links{
   }
 }
 @media screen and (max-width: 900px){
+  /* Make nav fixed at top on small screens so title/logo and menu stay attached when scrolling */
+  .wrapper nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: #171c24;
+  }
+  /* Prevent content from being covered by the fixed nav */
+  body{
+    padding-top: 70px;
+  }
   .wrapper .menu-icon{
     display: block;
-    z-index: 1000;
+    z-index: 1003;
+  }
+  /* Keep the logo attached to the nav flow (not absolutely positioned) on mobile */
+  .content .logo{
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    z-index: 1004;
   }
   .wrapper #show-menu:checked ~ .menu-icon i::before{
     content: "\f00d";
@@ -234,14 +258,14 @@ nav .content .links{
     background: #14181f;
     height: 100%;
     width: 100%;
-    top: 70px;
+    top: 70px; /* place directly under the fixed nav */
     left: -100%;
     margin-left: 0;
     max-width: 350px;
     overflow-y: auto;
     padding-bottom: 100px;
     transition: all 0.3s ease;
-    z-index: 999; /* Ensure menu stays above slider */
+    z-index: 1001; /* ensures menu sits below nav controls but above slider */
   }
   nav #show-menu:checked ~ .content .links{
     left: 0%;
@@ -282,7 +306,8 @@ nav .content .links{
     font-size: 18px;
     line-height: 30px;
     border-radius: 5px!important;
-  }}
+  }
+}
 /* Desktop: place logo/title above the menu to avoid overlap */
 @media screen and (min-width: 900px) {
   .wrapper nav{
